@@ -12,11 +12,11 @@ Proyek ini menggunakan pendekatan **Supervised Learning** dengan fokus pada **Na
 
 ## Dataset
 
-Dataset yang digunakan berisi koleksi ulasan teks beserta label sentimennya.
+Dataset yang digunakan berisi koleksi ulasan teks beserta label sentimennya. **Perhatian: File data tidak disertakan dalam repositori ini karena ukurannya yang besar.**
 
-* **File Data**:
-    * `train_data.csv`: Digunakan untuk melatih model.
-    * `test_data.csv`: Digunakan untuk menguji performa model.
+* **File Data yang Dibutuhkan**:
+    * `train_data.csv` (untuk pelatihan model)
+    * `test_data.csv` (untuk pengujian model)
 * **Struktur Data**: Kedua file CSV memiliki dua kolom utama:
     * `sentence`: Berisi teks ulasan.
     * `sentiment`: Berisi label sentimen (0 untuk negatif/netral, 1 untuk positif).
@@ -70,14 +70,16 @@ Proyek ini mengikuti alur kerja standar dalam pembangunan model Machine Learning
     git clone [https://github.com/YourGitHubUsername/sentiment-analysis-reviews.git](https://github.com/YourGitHubUsername/sentiment-analysis-reviews.git)
     cd sentiment-analysis-reviews
     ```
-2.  **Unduh Dataset:**
-    Pastikan file `train_data.csv` dan `test_data.csv` ada di lokal Anda.
+2.  **Dapatkan Dataset:**
+    Anda memerlukan file `train_data.csv` dan `test_data.csv`. Karena ukurannya besar, file-file ini tidak disertakan langsung dalam repositori. **Pastikan Anda memiliki kedua file ini di komputer lokal Anda dari sumber aslinya.**
 3.  **Tempatkan Dataset:**
-    Unggah kedua file CSV ini ke Google Drive Anda.
+    Unggah kedua file CSV (`train_data.csv` dan `test_data.csv`) ke **Google Drive Anda**.
 4.  **Buka di Google Colab:**
     Buka file `sentiment_analysis_review.ipynb` (nama notebook yang Anda gunakan) di Google Colab.
 5.  **Sesuaikan Path Data:**
-    Di bagian kode "Muat Data", pastikan Anda mengganti `base_path = '/content/drive/MyDrive/Dataset_ML/Sentiment/'` dengan path folder yang benar di Google Drive Anda tempat `train_data.csv` dan `test_data.csv` berada. Pastikan juga Google Drive Anda sudah di-*mount* di Colab.
+    Di bagian kode "Muat Data" dalam notebook, pastikan Anda:
+    * Menjalankan `drive.mount('/content/drive')` untuk menghubungkan Colab ke Google Drive Anda.
+    * Mengganti `base_path = '/content/drive/MyDrive/Dataset_ML/Sentiment/'` dengan path folder yang **benar** di Google Drive Anda tempat `train_data.csv` dan `test_data.csv` berada.
 6.  **Jalankan Sel-sel Kode:**
     Jalankan setiap sel kode secara berurutan (`Runtime > Run all`) untuk mereplikasi seluruh alur kerja proyek.
 
@@ -92,5 +94,3 @@ Proyek ini mengikuti alur kerja standar dalam pembangunan model Machine Learning
 * **Matplotlib** (untuk visualisasi)
 * **Seaborn** (untuk visualisasi)
 * **Google Colab** (sebagai lingkungan pengembangan)
-
----
